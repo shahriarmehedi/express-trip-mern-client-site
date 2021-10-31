@@ -6,7 +6,7 @@ const ManageBookings = () => {
     const [myBookings, setMyBookings] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/bookings')
+        fetch('https://dreadful-spirit-92127.herokuapp.com/bookings')
             .then(res => res.json())
             .then(data => setMyBookings(data))
 
@@ -17,7 +17,7 @@ const ManageBookings = () => {
     const handleDeleteBooking = id => {
         const proceed = window.confirm('Are you sure to delete this Booking?');
         if (proceed) {
-            const url = `http://localhost:5000/bookings/${id}`;
+            const url = `https://dreadful-spirit-92127.herokuapp.com/bookings/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -39,7 +39,7 @@ const ManageBookings = () => {
     const handleConfirmBooking = id => {
         const confirmedBooking = { status: "Confirmed" };
 
-        const url = `http://localhost:5000/bookings/${id}`;
+        const url = `https://dreadful-spirit-92127.herokuapp.com/bookings/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {
@@ -62,8 +62,8 @@ const ManageBookings = () => {
             exit={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             initial={{ opacity: 0 }}
-            className="bg-gray-900 text-white">
-            <h1 className="pt-10 pb-20 text-center text-3xl font-bold text-green-400">Manage All Bookings</h1>
+            className="bg-yellow-50 text-white">
+            <h1 className="pt-10 pb-10 text-center text-3xl font-bold text-gray-700">Manage All Bookings (ADMIN) </h1>
             <div className="w-5/6 xl:px-36 2xl:px-48 py-5 lg:py-28 text-white grid grid-cols-1 lg:grid-cols-2 gap-10 mx-auto">
                 {
                     myBookings.map(booking => <div
@@ -71,7 +71,7 @@ const ManageBookings = () => {
                     >
                         <div className="transform bg-gray-800 to-hover hover:shadow-xl hover:bg-gray-700 text-center py-10 transition duration-300 rounded-box w-full mx-auto">
                             <h1 className="px-5 pt-5 text-2xl font-bold text-yellow-400">Client: {booking.fullname}</h1>
-                            <h2 className="px-5 pt-5 text-gray-400">Order ID: {booking._id}</h2>
+                            <h2 className="px-5 pt-5 text-gray-400">Order ID: <span className="text-yellow-300">{booking._id}</span> </h2>
                             <h2 className="px-5 pt-5 text-gray-400">Email: {booking.useremail}</h2>
                             <h2 className="px-5 pt-5 text-gray-200 text-xl">Phone: {booking.userphone}</h2>
                             <h2 className="px-5 pt-5 text-gray-200 text-xl">Address: {booking.useraddress}</h2>

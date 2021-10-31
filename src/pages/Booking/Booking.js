@@ -23,7 +23,7 @@ const Booking = () => {
         console.log('confirm booking clicked');
 
         console.log(data);
-        axios.post('http://localhost:5000/bookings', data)
+        axios.post('https://dreadful-spirit-92127.herokuapp.com/bookings', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Booked successfully, Now visit My Bookings to view your bookings');
@@ -35,7 +35,7 @@ const Booking = () => {
 
     //  LOADING DATA
     useEffect(() => {
-        fetch(`http://localhost:5000/services/${bookingId}`)
+        fetch(`https://dreadful-spirit-92127.herokuapp.com/services/${bookingId}`)
             .then(res => res.json())
             .then(data => setBooking(data))
     }, []);
@@ -54,17 +54,17 @@ const Booking = () => {
                 exit={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 initial={{ opacity: 0 }}
-                className="bg-gray-900 text-white">
-                <h1 className="pt-10 pb-20 text-center text-3xl font-bold text-green-400">Confirm Your Booking</h1>
+                className="bg-yellow-50 text-white pb-24">
+                <h1 className="pt-10 pb-20 text-center text-3xl font-bold text-gray-700">Confirm Your Booking</h1>
                 <div className="text-gray-800 pb-20 bg-yellow-300 pt-10 rounded-box w-11/12 md:w-5/6 lg:w-2/5 mx-auto" >
                     <form className=" add-service-form w-5/6 mx-auto " onSubmit={handleSubmit(onSubmit)}>
                         <div className="w-full py-10 bg-yellow-100 rounded-box mx-auto">
                             <h3 className="text-2xl font-bold">Selected Trip : {booking?.place}, {booking?.country} </h3>
-                            <h4> Trip ID: {booking?._id} </h4>
-                            <h4 className="text-2xl font-bold"> Price: $ {booking?.price} </h4>
-                            <h4 className="text-2xl font-bold"> Trip Duration: {booking?.duration} Days </h4>
-                            <h4 className="text-2xl font-bold"> Person: {booking?.people} </h4>
-                        </div>
+                            <h4> Trip ID: {booking?._id} </h4> <br />
+                            <h4 className="text-2xl"> Price: $ {booking?.price} </h4>
+                            <h4 className="text-2xl"> Trip Duration: {booking?.duration} Days </h4>
+                            <h4 className="text-2xl"> Person: {booking?.people} </h4>
+                        </div> <br />
 
 
                         <input type="hidden" value="Pending" {...register("status")} />
@@ -96,7 +96,7 @@ const Booking = () => {
                         <textarea type="textarea" {...register("useraddress", { required: true })} />
 
                         <br />
-                        <input className=" bg-gray-700 text-white mt-12 submit-btn" type="submit" value="CONFIRM BOOKING" />
+                        <input className=" bg-gray-700 hover:bg-gray-800 transition duration-300 text-white mt-12 submit-btn" type="submit" value="CONFIRM BOOKING" />
                     </form>
                 </div>
 

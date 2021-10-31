@@ -10,7 +10,7 @@ const AddService = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data);
-        axios.post('http://localhost:5000/services', data)
+        axios.post('https://dreadful-spirit-92127.herokuapp.com/services', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Added successfully');
@@ -25,8 +25,8 @@ const AddService = () => {
             exit={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             initial={{ opacity: 0 }}
-            className="bg-gray-900 text-white">
-            <h1 className="pt-10 pb-20 text-center text-3xl font-bold text-green-400">ADD SERVICE HERE</h1>
+            className="bg-yellow-50 text-white">
+            <h1 className="pt-10 pb-20 text-center text-3xl font-bold text-gray-700">ADD SERVICE HERE</h1>
             <div className="text-gray-800 pb-20 bg-yellow-300 pt-10 rounded-box w-11/12 md:w-5/6 lg:w-2/5 mx-auto" >
                 <form className=" add-service-form w-5/6 mx-auto " onSubmit={handleSubmit(onSubmit)}>
                     <label className="label">
@@ -87,7 +87,7 @@ const AddService = () => {
                     </label>
                     <input required type="number" {...register("price", { required: true })} />
                     <br />
-                    <input className=" bg-yellow-400 mt-12 submit-btn" type="submit" value="ADD SERVICE" />
+                    <input className=" bg-gray-700 hover:bg-gray-800 transition duration-300 text-white mt-12 submit-btn" type="submit" value="ADD SERVICE" />
                 </form>
             </div>
 
