@@ -67,11 +67,11 @@ const SignUp = () => {
 
 
     return (
-        <motion.div className="bg-gray-900 text-white pb-32"
+        <motion.div className="bg-yellow-50 text-white pb-32"
             exit={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             initial={{ opacity: 0 }}>
-            <h2 className="text-3xl py-10 font-bold">Please Signup</h2>
+            <h2 className="text-3xl py-10 font-bold text-gray-700">Please Signup</h2>
             <div className="w-5/6 md:w-1/2 lg:w-1/3 mx-auto py-16 bg-gray-800 rounded-box">
                 <form onSubmit={handleSignup}>
                     <div className="form-control w-5/6 md:w-2/3 mx-auto ">

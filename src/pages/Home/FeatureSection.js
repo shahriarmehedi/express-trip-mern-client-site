@@ -8,7 +8,7 @@ const FeatureSection = () => {
             <div className="w-5/6 xl:px-36 2xl:px-48 py-5 lg:py-28  grid grid-cols-1 lg:grid-cols-3 gap-10 mx-auto">
                 <div>
                     <img className="mx-auto h-32 mb-5" src="https://i.ibb.co/VShKg3j/2.png" alt="" />
-                    <h2 className="text-2xl font-bold mb-3">Yeasr of successfull work</h2>
+                    <h2 className="text-2xl font-bold mb-3">Years of successfull work</h2>
                     <h3>We work andstrive to become the best travel agency</h3>
                 </div>
                 <div>

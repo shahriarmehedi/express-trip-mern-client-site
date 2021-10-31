@@ -45,13 +45,15 @@ const MyBookings = () => {
             animate={{ opacity: 1 }}
             initial={{ opacity: 0 }}
             className="bg-yellow-50 text-white">
-            <h1 className="pt-10 pb-20 text-center text-3xl font-bold text-gray-700">Manage Your Bookings</h1>
+            <h1 className="pt-10 pb-5 text-center text-3xl font-bold text-gray-700">Manage Your Bookings</h1>
+            <p className="text-gray-400 pt-2">Logged in user can only see his/her bookings here and can cancel it.</p>
             <div className="w-5/6 xl:px-36 2xl:px-48 py-5 lg:py-28 text-white grid grid-cols-1 lg:grid-cols-2 gap-10 mx-auto">
                 {
                     myBookings.filter(mydata => mydata.useremail === user.email).map(booking => <div
                         key={booking._id}
                     >
                         <div className="transform bg-gray-800 to-hover hover:shadow-xl hover:bg-gray-700 text-center py-10 transition duration-300 rounded-box w-full mx-auto">
+                            <img className="mx-auto rounded-full" src={user.photoURL} alt="" />
                             <h1 className="px-5 pt-5 text-2xl font-bold text-yellow-400">Client: {booking.fullname}</h1>
                             <h2 className="px-5 pt-5 text-gray-400">Order ID: <span className="text-yellow-300">{booking._id}</span></h2>
                             <h2 className="px-5 pt-5 text-gray-400">Email: {booking.useremail}</h2>

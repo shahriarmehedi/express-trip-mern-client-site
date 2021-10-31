@@ -63,7 +63,8 @@ const ManageBookings = () => {
             animate={{ opacity: 1 }}
             initial={{ opacity: 0 }}
             className="bg-yellow-50 text-white">
-            <h1 className="pt-10 pb-10 text-center text-3xl font-bold text-gray-700">Manage All Bookings (ADMIN) </h1>
+            <h1 className="pt-10 pb-2 text-center text-3xl font-bold text-gray-700">Manage All Bookings (ADMIN) </h1>
+            <p className="text-gray-400 pt-5">Admin can see and manage anyones bookings here</p>
             <div className="w-5/6 xl:px-36 2xl:px-48 py-5 lg:py-28 text-white grid grid-cols-1 lg:grid-cols-2 gap-10 mx-auto">
                 {
                     myBookings.map(booking => <div
@@ -77,7 +78,7 @@ const ManageBookings = () => {
                             <h2 className="px-5 pt-5 text-gray-200 text-xl">Address: {booking.useraddress}</h2>
                             <h2 className="px-5 pt-5 text-gray-200 text-xl">Status: {booking.status === "Pending" ? <span className="py-1 px-3 text-gray-900 bg-purple-300 rounded">PENDING</span> : <span className="py-1 px-3 bg-green-300 text-gray-900 rounded">CONFIRMED</span>}  </h2>
                             <br /><br />
-                            {booking.status === "Pending" ? <button onClick={() => handleConfirmBooking(booking._id)} className="px-5 py-3 mt-10 mb-8 bg-green-500 custom-bg-font rounded hover:bg-green-600 text-white transition duration-300 mr-2">Confirm Booking</button> : <button className="px-5 py-3 mt-10 mb-8 bg-green-500 custom-bg-font rounded hover:bg-green-600 text-white transition duration-300 mr-2">CONFIRMED <i class="fas fa-check-circle"></i></button>}
+                            {booking.status === "Pending" ? <button onClick={() => handleConfirmBooking(booking._id)} className="px-5 py-3 mt-10 mb-8 bg-green-500 custom-bg-font rounded hover:bg-green-600 text-white transition duration-300 mr-2">Confirm Booking</button> : <button className="px-5 py-3 mt-10 mb-8 bg-green-500 custom-bg-font rounded hover:bg-green-600 text-white transition duration-300 mr-2">CONFIRMED <i className="fas fa-check-circle"></i></button>}
                             <button onClick={() => handleDeleteBooking(booking._id)} className="px-5 py-3 mt-10 mb-8 text-white bg-red-600 custom-bg-font rounded hover:bg-red-800 transition duration-300 ml-2">Delete Booking</button>
                         </div>
                     </div>)
@@ -88,3 +89,6 @@ const ManageBookings = () => {
 };
 
 export default ManageBookings;
+
+
+

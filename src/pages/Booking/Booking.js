@@ -14,10 +14,20 @@ const Booking = () => {
 
     const { user } = useAuth();
     const { register, handleSubmit, reset } = useForm();
-
     let { bookingId } = useParams();
 
     const [booking, setBooking] = useState({});
+
+    //  LOADING DATA
+    useEffect(() => {
+        fetch(`https://dreadful-spirit-92127.herokuapp.com/services/${bookingId}`)
+            .then(res => res.json())
+            .then(data => setBooking(data))
+    }, []);
+
+
+
+
 
     const onSubmit = data => {
         console.log('confirm booking clicked');
@@ -32,20 +42,6 @@ const Booking = () => {
             })
 
     };
-
-    //  LOADING DATA
-    useEffect(() => {
-        fetch(`https://dreadful-spirit-92127.herokuapp.com/services/${bookingId}`)
-            .then(res => res.json())
-            .then(data => setBooking(data))
-    }, []);
-
-
-
-
-
-
-
 
 
     return (
@@ -68,6 +64,7 @@ const Booking = () => {
 
 
                         <input type="hidden" value="Pending" {...register("status")} />
+
 
                         <label className="label">
                             <span className="label-text text-gray-800">Your Full Name:</span>

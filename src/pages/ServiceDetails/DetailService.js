@@ -37,13 +37,13 @@ const DetailService = () => {
                 <h2 className="text-gray-500 pt-10 w-5/6 lg:w-2/5 mx-auto pb-2"> {description} </h2>
                 <h2 className="text-gray-700 pt-5 w-5/6 lg:w-2/5 mx-auto pb-2 text-xl font-bold">Duration: {duration} Days </h2>
                 <h2 className="text-gray-700 pt-5 w-5/6 lg:w-2/5 mx-auto pb-2 text-xl font-bold">For: {people} Person  </h2>
-                <h2 className="text-gray-700 pt-5 w-5/6 lg:w-2/5 mx-auto pb-2 text-xl font-bold">Ratings: <i class="fas fa-star text-yellow-500"></i>
-                    <i class="fas fa-star text-yellow-500"></i>
-                    <i class="fas fa-star text-yellow-500"></i>
-                    <i class="fas fa-star text-yellow-500"></i>
-                    <i class="fas fa-star-half text-yellow-500"></i>{ratings} </h2>
+                <h2 className="text-gray-700 pt-5 w-5/6 lg:w-2/5 mx-auto pb-2 text-xl font-bold">Ratings: <i className="fas fa-star text-yellow-500"></i>
+                    <i className="fas fa-star text-yellow-500"></i>
+                    <i className="fas fa-star text-yellow-500"></i>
+                    <i className="fas fa-star text-yellow-500"></i>
+                    <i className="fas fa-star-half text-yellow-500"></i>{ratings} </h2>
                 <h2 className="text-gray-800 pt-5 w-5/6 lg:w-2/5 mx-auto pb-20 text-xl font-bold">Package Price: <span className="text-yellow-500 text-2xl font-bold">$ {price}</span> </h2>
-                <NavLink to={`/booking/${_id}`} activeStyle={{ fontWeight: "bold", color: "#34D399" }}><button className="px-8 py-3 mb-10 bg-yellow-400 rounded hover:bg-gray-800 text-gray-800 hover:text-white transition duration-300 ">Book This Service</button></NavLink>
+                <NavLink to={`/booking/${_id}`} activeStyle={{ fontWeight: "bold", color: "#34D399" }}><button className="px-16 py-4 mb-10 bg-gray-700 rounded-full hover:bg-yellow-400 text-yellow-300 hover:text-gray-800 transition duration-300 ">Book This Service</button></NavLink>
             </div>
         </motion.div>
     );
