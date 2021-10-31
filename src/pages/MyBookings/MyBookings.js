@@ -52,7 +52,7 @@ const MyBookings = () => {
                         key={booking._id}
                     >
                         <div className="transform bg-gray-800 to-hover hover:shadow-xl hover:bg-gray-700 text-center py-10 transition duration-300 rounded-box w-full mx-auto">
-                            <h1 className="px-5 pt-5 text-2xl font-bold text-yellow-400">Name: {booking.fullname}</h1>
+                            <h1 className="px-5 pt-5 text-2xl font-bold text-yellow-400">Client: {booking.fullname}</h1>
                             <h2 className="px-5 pt-5 text-gray-400">Order ID: {booking._id}</h2>
                             <h2 className="px-5 pt-5 text-gray-400">Email: {booking.useremail}</h2>
                             <h2 className="px-5 pt-5 text-gray-200 text-xl">Phone: {booking.userphone}</h2>

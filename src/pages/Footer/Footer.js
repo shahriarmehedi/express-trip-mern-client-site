@@ -59,7 +59,7 @@ const Footer = () => {
                 <div className="bg-gray-800 bg-opacity-75">
                     <div className="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
                         <a className="flex title-font font-medium items-center md:justify-start justify-center text-white">
-                            <img src="https://i.ibb.co/HBhd9wh/expresstrip-logo.png" alt="" />
+                            <img src="https://i.ibb.co/tb2p8n7/expresstrip-logo2.png" alt="" />
 
                         </a>
                         <p className="text-sm text-gray-400 sm:ml-6 sm:mt-0 mt-4">© 2021 ExpressTrip —

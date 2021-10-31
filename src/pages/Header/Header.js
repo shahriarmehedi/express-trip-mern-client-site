@@ -30,7 +30,7 @@ const Header = () => {
                     user?.displayName && <h1 className="pt-10"><NavLink to="/manageBookings" activeStyle={{
                         fontWeight: "bold",
                         color: "#34D399"
-                    }}><button className="py-3 ">MANAGE BOOKINGS</button></NavLink></h1>
+                    }}><button className="py-3 ">MANAGE ALL BOOKINGS</button></NavLink></h1>
                 }
                 {
                     user?.displayName && <h1 className="pt-10"><NavLink to="/addService" activeStyle={{
@@ -57,7 +57,7 @@ const Header = () => {
         <div>
             <nav className="bg-gray-900 text-white mx-auto overflow-x-hidden">
                 <ul className="flex justify-between my-5 items-center">
-                    <li className="px-10 lg:pl-20 py-3 text-2xl font-bold"><a href="/"><img src="https://i.ibb.co/HBhd9wh/expresstrip-logo.png" alt="" /></a></li>
+                    <li className="px-10 lg:pl-20 py-3 text-2xl font-bold"><a href="/"><img src="https://i.ibb.co/tb2p8n7/expresstrip-logo2.png" alt="" /></a></li>
                     <li className="md:hidden">{user?.displayName && <img className="user-photo" src={user?.photoURL} alt="" />}</li>
                     <li onClick={() => setShowmenu(!showmenu)} className="md:hidden text-2xl px-5"><i className="fas fa-bars"></i>
                         {menu}</li>
@@ -85,7 +85,7 @@ const Header = () => {
                             user?.displayName && <li className="mx-5 hover:text-green-400 transition duration-300"> <NavLink to="/manageBookings" activeStyle={{
                                 fontWeight: "bold",
                                 color: "#34D399"
-                            }}><button className="py-3 ">MANAGE BOOKINGS</button></NavLink> </li>
+                            }}><button className="py-3 ">MANAGE ALL BOOKINGS</button></NavLink> </li>
                         }
 
                         <li className="mx-5 hover:text-green-400 transition duration-300">

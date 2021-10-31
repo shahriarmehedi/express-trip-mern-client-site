@@ -10,7 +10,7 @@ const Hero = () => {
                     <div>
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold my-10 leading-normal"> Explore the world  & <br />become your own tour guide
                         </h1>
-                        <p className="">Make it work, make it right, make it fast.</p>
+                        <p className="">Explore the country’s first and leading online travel aggregator.</p>
                         <button
                             className="px-8 py-3 mt-10 bg-yellow-400 custom-bg-font rounded hover:bg-white text-gray-800 transition duration-300 "><NavLink to="/services">EXPLORE OUR SERVICES</NavLink></button>
                     </div>

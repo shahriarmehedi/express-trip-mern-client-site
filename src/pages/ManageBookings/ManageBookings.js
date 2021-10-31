@@ -70,14 +70,14 @@ const ManageBookings = () => {
                         key={booking._id}
                     >
                         <div className="transform bg-gray-800 to-hover hover:shadow-xl hover:bg-gray-700 text-center py-10 transition duration-300 rounded-box w-full mx-auto">
-                            <h1 className="px-5 pt-5 text-2xl font-bold text-yellow-400">Name: {booking.fullname}</h1>
+                            <h1 className="px-5 pt-5 text-2xl font-bold text-yellow-400">Client: {booking.fullname}</h1>
                             <h2 className="px-5 pt-5 text-gray-400">Order ID: {booking._id}</h2>
                             <h2 className="px-5 pt-5 text-gray-400">Email: {booking.useremail}</h2>
                             <h2 className="px-5 pt-5 text-gray-200 text-xl">Phone: {booking.userphone}</h2>
                             <h2 className="px-5 pt-5 text-gray-200 text-xl">Address: {booking.useraddress}</h2>
                             <h2 className="px-5 pt-5 text-gray-200 text-xl">Status: {booking.status === "Pending" ? <span className="py-1 px-3 text-gray-900 bg-purple-300 rounded">PENDING</span> : <span className="py-1 px-3 bg-green-300 text-gray-900 rounded">CONFIRMED</span>}  </h2>
                             <br /><br />
-                            {booking.status === "Pending" ? <button onClick={() => handleConfirmBooking(booking._id)} className="px-5 py-3 mt-10 mb-8 bg-green-500 custom-bg-font rounded hover:bg-green-600 text-white transition duration-300 mr-2">Confirm Booking</button> : <button className="px-5 py-3 mt-10 mb-8 bg-green-500 custom-bg-font rounded hover:bg-green-600 text-white transition duration-300 mr-2">Confirmed</button>}
+                            {booking.status === "Pending" ? <button onClick={() => handleConfirmBooking(booking._id)} className="px-5 py-3 mt-10 mb-8 bg-green-500 custom-bg-font rounded hover:bg-green-600 text-white transition duration-300 mr-2">Confirm Booking</button> : <button className="px-5 py-3 mt-10 mb-8 bg-green-500 custom-bg-font rounded hover:bg-green-600 text-white transition duration-300 mr-2">CONFIRMED <i class="fas fa-check-circle"></i></button>}
                             <button onClick={() => handleDeleteBooking(booking._id)} className="px-5 py-3 mt-10 mb-8 text-white bg-red-600 custom-bg-font rounded hover:bg-red-800 transition duration-300 ml-2">Delete Booking</button>
                         </div>
                     </div>)

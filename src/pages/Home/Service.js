@@ -9,7 +9,7 @@ const Service = (props) => {
     return (
         <div className="transform custom-bg hover:-translate-y-3 to-hover hover:shadow-xl hover:bg-gray-800 text-center secondary-bg transition duration-300 rounded-box w-full mx-auto">
             <img className="mx-auto w-full rounded-t service-img" src={imgURL} alt="" />
-            <h1 className="px-5 pt-5 text-2xl font-bold text-green-400">{place}, {country}</h1>
+            <h1 className="px-5 pt-5 text-2xl font-bold text-yellow-400">{place}, {country}</h1>
             <h2 className="px-5 pt-5 text-gray-400">{subtext}</h2>
             <h2 className="text-gray-200 pt-5 w-5/6 lg:w-2/5 mx-auto pb-2">Ratings: <i class="fas fa-star text-yellow-400"></i>
                 <i class="fas fa-star text-yellow-400"></i>
