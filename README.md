@@ -1,6 +1,6 @@
-# Project Name: Gymnesia
+# Project Name: ExpressTrip
 
-### Live SIte Link:  https://shahriar-gymnesia.web.app/
+### Live SIte Link: https://shahriar-expresstrip.web.app/
 
 - ## Energize your mornings and come train and workout with our personal trainers at Mutants Gym. Join our Aerobics Yoga and Zumba lessons and have fun while exercising.
 

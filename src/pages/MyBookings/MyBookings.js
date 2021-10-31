@@ -1,12 +1,14 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import useAuth from '../../hooks/useAuth';
 
 
 const MyBookings = () => {
+    const { user } = useAuth();
 
     const [myBookings, setMyBookings] = useState([]);
-
     useEffect(() => {
         fetch('http://localhost:5000/bookings')
             .then(res => res.json())
@@ -46,7 +48,7 @@ const MyBookings = () => {
             <h1 className="pt-10 pb-20 text-center text-3xl font-bold text-green-400">Manage All Bookings</h1>
             <div className="w-5/6 xl:px-36 2xl:px-48 py-5 lg:py-28 text-white grid grid-cols-1 lg:grid-cols-2 gap-10 mx-auto">
                 {
-                    myBookings.map(booking => <div
+                    myBookings.filter(mydata => mydata.useremail === user.email).map(booking => <div
                         key={booking._id}
                     >
                         <div className="transform bg-gray-800 to-hover hover:shadow-xl hover:bg-gray-700 text-center py-10 transition duration-300 rounded-box w-full mx-auto">
