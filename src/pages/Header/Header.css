@@ -1,0 +1,14 @@
+.user-name {
+  position: relative;
+  top: 8px;
+}
+
+.user-photo {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+}
+
+.custom-bg {
+  background-color: #ececec;
+}
