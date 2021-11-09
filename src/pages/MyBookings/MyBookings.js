@@ -54,12 +54,13 @@ const MyBookings = () => {
                     >
                         <div className="transform bg-gray-800 to-hover hover:shadow-xl hover:bg-gray-700 text-center py-10 transition duration-300 rounded-box w-full mx-auto">
                             <img className="mx-auto rounded-full" src={user.photoURL} alt="" />
-                            <h1 className="px-5 pt-5 text-2xl font-bold text-yellow-400">Client: {booking.fullname}</h1>
+                            <h1 className="px-5 pt-5 text-2xl font-bold text-white">Trip Destination: <span className="text-yellow-300">{booking.destinationPlace},{booking.destinationCountry}</span></h1>
+                            <h1 className="px-5 pt-5 text-xl font-bold text-white">Client: <span className="text-yellow-300">{booking.fullname}</span></h1>
                             <h2 className="px-5 pt-5 text-gray-400">Order ID: <span className="text-yellow-300">{booking._id}</span></h2>
                             <h2 className="px-5 pt-5 text-gray-400">Email: {booking.useremail}</h2>
                             <h2 className="px-5 pt-5 text-gray-200 text-xl">Phone: {booking.userphone}</h2>
                             <h2 className="px-5 pt-5 text-gray-200 text-xl">Address: {booking.useraddress}</h2>
-                            <h2 className="px-5 pt-5 text-gray-200 text-xl">Status: {booking.status === "Pending" ? <span className="py-1 px-3 text-gray-900 bg-purple-300 rounded">PENDING</span> : <span className="py-1 px-3 bg-green-300 text-gray-900 rounded">CONFIRMED</span>} </h2>
+                            <h2 className="px-5 pt-5 text-gray-200 text-xl">Status: {booking.status === "pending" ? <span className="py-1 px-3 text-gray-900 bg-purple-300 rounded">PENDING</span> : <span className="py-1 px-3 bg-green-300 text-gray-900 rounded">CONFIRMED</span>} </h2>
                             <br />
                             <button onClick={() => handleDeleteBooking(booking._id)} className="px-5 py-3 mt-10 mb-8 text-white bg-red-600 custom-bg-font rounded hover:bg-red-800 transition duration-300 ml-2">Cancel Booking</button>
                         </div>

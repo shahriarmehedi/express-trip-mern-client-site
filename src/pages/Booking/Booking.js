@@ -13,7 +13,7 @@ const Booking = () => {
 
     const [booking, setBooking] = useState({});
 
-    const { place, _id } = booking;
+    const { place, country } = booking;
 
     //  LOADING DATA
     useEffect(() => {
@@ -42,8 +42,8 @@ const Booking = () => {
         // COLLECT DATA
         const placeBooking = {
             ...bookingInfo,
-            serviceName: place,
-            bookingId: _id
+            destinationPlace: place,
+            destinationCountry: country
         }
 
 
@@ -79,17 +79,6 @@ const Booking = () => {
                             <h4 className="text-2xl"> Trip Duration: {booking?.duration} Days </h4>
                             <h4 className="text-2xl"> Person: {booking?.people} </h4>
                         </div> <br />
-
-                        <label className="label">
-                            <span className="label-text text-gray-800">Trip Id:</span>
-                        </label>
-                        <input defaultValue={booking?._id || ''} required name="tripid" onBlur={handleOnBlur} />
-
-                        <label className="label">
-                            <span className="label-text text-gray-800">Trip Name:</span>
-                        </label>
-                        <input defaultValue={booking?.place || ''} required name="tripname" onBlur={handleOnBlur} />
-
 
                         <label className="label">
                             <span className="label-text text-gray-800">Your Full Name:</span>
